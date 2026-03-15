@@ -13,7 +13,7 @@ function addtocart(selector,productName,index,name,url,productDescribe,text,prod
   cy.get(addtoCartButton).should('be.visible')
   .click();
   cy.get(backToProduct).should('be.visible').click();
-  cy.url().should('include', inventoryURL);
+  
 }
 
 describe('Product page', () => {

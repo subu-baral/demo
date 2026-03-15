@@ -7,8 +7,8 @@ describe ('Login page', ()=>{
     beforeEach(() => {
 
         // visit the swag lab page
-      cy.visit('https://www.saucedemo.com/');
-      cy.url().should('eq', 'https://www.saucedemo.com/');
+      cy.visit(textMessage.url);
+      cy.url().should('eq', textMessage.url);
       cy.get('.login_logo').should('have.text', 'Swag Labs');
 
 
@@ -21,7 +21,7 @@ describe ('Login page', ()=>{
 
       //invalid login with incorrect username
     it('Invalid login with incorrect username',()=>{
-      cy.visit('https://www.saucedemo.com/');
+      cy.visit(textMessage.url);
 
       cy.get(demoSelectors.userNameSelector).clear().type("Tester");
       cy.get(demoSelectors.passwordSelector).clear().type("secret_sauce");
@@ -32,7 +32,7 @@ describe ('Login page', ()=>{
 
       // Invalid login with incorrect username and password
     it('Invalid username and paswword',()=>{
-      cy.visit('https://www.saucedemo.com/');
+      cy.visit('textMessage.url');
 
       cy.get(demoSelectors.userNameSelector).clear().type("Tester");
       cy.get(demoSelectors.passwordSelector).clear().type("TESTEETR");
@@ -43,7 +43,7 @@ describe ('Login page', ()=>{
 
        // Login with locked_out_user
     it('Login with locked_out_user',()=>{
-      cy.visit('https://www.saucedemo.com/');
+      cy.visit('textMessage.url');
 
       cy.get(demoSelectors.userNameSelector).clear().type("locked_out_user");
       cy.get(demoSelectors.passwordSelector).clear().type("secret_sauce");
@@ -53,7 +53,7 @@ describe ('Login page', ()=>{
 
        // Login with problem_user
     it('Login with locked_out_user',()=>{
-      cy.visit('https://www.saucedemo.com/');
+      cy.visit('textMessage.url');
 
       cy.get(demoSelectors.userNameSelector).clear().type("problem_user");
       cy.get(demoSelectors.passwordSelector).clear().type("secret_sauce");
@@ -62,7 +62,7 @@ describe ('Login page', ()=>{
 
       // Login with performance_glitch_user
     it('Login with locked_out_user',()=>{
-      cy.visit('https://www.saucedemo.com/');
+      cy.visit('textMessage.url');
 
       cy.get(demoSelectors.userNameSelector).clear().type("performance_glitch_user");
       cy.get(demoSelectors.passwordSelector).clear().type("secret_sauce");
@@ -72,7 +72,7 @@ describe ('Login page', ()=>{
 
       // Login with error_user
     it('Login with locked_out_user',()=>{
-      cy.visit('https://www.saucedemo.com/');
+      cy.visit('textMessage.url');
 
       cy.get(demoSelectors.userNameSelector).clear().type("error_user");
       cy.get(demoSelectors.passwordSelector).clear().type("secret_sauce");
@@ -82,7 +82,7 @@ describe ('Login page', ()=>{
 
       // Login with error_user
     it('Login with locked_out_user',()=>{
-      cy.visit('https://www.saucedemo.com/');
+      cy.visit('textMessage.url');
 
       cy.get(demoSelectors.userNameSelector).clear().type("visual_user");
       cy.get(demoSelectors.passwordSelector).clear().type("secret_sauce");

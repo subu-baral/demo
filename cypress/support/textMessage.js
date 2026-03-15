@@ -68,5 +68,6 @@ export const textMessage= {
     completeHeaderText : 'Thank you for your order!',
     completeOrderMessage : 'Your order has been dispatched, and will arrive just as fast as the pony can get there!',
     checkoutInfoText : 'Checkout: Your Information',
+    url : 'https://www.saucedemo.com/',
  
  }
